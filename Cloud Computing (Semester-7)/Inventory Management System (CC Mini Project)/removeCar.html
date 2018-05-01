@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet">
+		<title> Remove Car </title>
+	</head>
+	<body class="body2">
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+		<div class="message">
+			<h3>{{messages[0]}}</h3>
+		</div>
+		{% endif %}
+		{% endwith %}
+		<header>
+			<nav>
+				<h1>Car Management System</h1>
+				<ul >
+					<li><a class="homeblack" href="/"> HOME </a> </li>
+					<li><a class="homeblack" href="/addCar"> ADD CAR </a> </li>
+					<li><a class="homered"> REMOVE CAR </a> </li>
+					<li><a class="homeblack" href="/inventory"> INVENTORY </a> </li>
+				</ul>
+			</nav>
+		</header>
+		<div class="divider"></div>
+		<div class="content2">
+			<div id="img1"></div>
+			<div class="form1">
+				<form method="post" action="remove">
+					ENTER CAR NAME: <input type="text" name="car" ><br />
+					ENTER NUMBER OF UNITS: <input type="number" name="units" min="1" ><br />
+					<input type="submit" value="REMOVE CAR">
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

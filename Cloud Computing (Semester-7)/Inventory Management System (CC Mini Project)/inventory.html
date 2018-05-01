@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<title> Inventory </title>
+	</head>
+	<body class="body3">
+		<header>
+			<nav>
+				<h1>Car Management System</h1>
+				<ul>
+					<li><a class="homeblack" href="/"> HOME </a> </li>
+					<li><a class="homeblack" href="/addCar"> ADD CAR </a> </li>
+					<li><a class="homeblack" href="/removeCar"> REMOVE CAR </a> </li>
+					<li><a class="homered"> INVENTORY </a> </li>
+				</ul>
+			</nav>
+		</header>
+		<div class="divider"></div>
+		<div class="content3">
+			<div id="img1"></div>
+			<div class="form1">
+				<h3 style="font-family: 'Bitter';">Cars Present in the Inventory</h3>
+				<table class="table">
+					<thead>
+						<tr><th>Car</th><th>Quantity</th></tr>
+					</thead>
+					<tbody>
+						{% for item in arr -%}
+							<tr>
+								<td>{{ item[0] }}</td>
+								<td>{{ item[1] }}</td>
+							</tr>
+						{%- endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
