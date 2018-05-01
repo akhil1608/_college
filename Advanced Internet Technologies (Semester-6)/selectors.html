@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Selectors</title>
+		<style>
+			* {
+				font-family: Times;
+			}
+			body {
+				background-color: black;
+			}
+			#id {
+				color: red;
+			}
+			.class {
+				color: white;
+			}
+			input[type="text"] {
+				color: blue;
+			}
+			div > p {
+				background-color: yellow;
+			}
+			div + p {
+				background-color: lightblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="id">Id text</div>
+		<div class="class">Class text</div>
+		<input type="text" value="Input Text"><br><br>
+		<div>
+			<p>Child 1</p>
+			<p>Child 2</p>
+		</div>
+		<p>Adjacent Text</p>
+		<div id="query">Query Text</div>
+		<script>
+			document.getElementById("query").style.backgroundColor="lightgreen";
+		</script>
+	</body>
+</html>

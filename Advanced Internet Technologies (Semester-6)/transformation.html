@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			div {
+				width: 100px;
+				height: 100px;
+				transition: transform linear 2s;
+			}
+			#t {
+				background-color: red;
+			}
+			#t:hover {
+				transform: translate(100px,50px);
+			}
+			#s {
+				background-color: blue;      
+			}
+			#s:hover {
+				transform: scale(2,2);
+			}
+			#r {
+				background-color: red;
+			}
+			#r:hover {
+				transform: rotate(60deg);
+			}
+			#sk {
+				background-color: blue;
+			}
+			#sk:hover {
+				transform: skew(30deg);
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+			<div id="t"></div><br />
+			<div id="s"></div><br />
+			<div id="r"></div><br />
+			<div id="sk"></div>
+		</center>
+	</body>
+</html>

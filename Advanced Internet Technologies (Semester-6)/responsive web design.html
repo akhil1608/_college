@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			body {
+				overflow-x: hidden;
+				margin: 0;
+			}
+			/* For mobile phones: */
+			[class*="col-"] {
+				width: 100%;
+				float: left;
+			}
+			.center {
+				display:flex;
+				justify-content:center;
+				align-items:center;
+			}
+			/* For desktop: */
+			@media only screen and (min-width: 768px) {
+				.col-1 {width: 10%;} .col-2 {width: 20%;} .col-3 {width: 30%;} .col-4 {width: 40%;} .col-5 {width: 50%;}
+				.col-6 {width: 60%;} .col-7 {width: 70%;} .col-8 {width: 80%;} .col-9 {width: 90%;} .col-10 {width: 100%;}
+			}
+			/* For images */
+			img {
+				width: 95%;
+				height: auto;
+			}
+			</style>
+	</head>
+	<body>
+		<div class="col-5">
+			<img src="https://lh5.googleusercontent.com/-AWODJ4Fb70E/USSwY8I3d5I/AAAAAAAADdA/ma6jBoLbc4w/s572/Screen+Shot+2013-02-20+at+1.15.28+PM.png" />
+		</div>
+		<div class="col-5">
+			<h2>wenger out</h2>
+			A summary of Arsenal's performance at the business end of a season, usually said over at the Emirates and Arsenal fan TV<br />
+			<i>"Where's the character fam? Where was Giroud ? Where was the defence? The old man has no answer to this. Wenger Out!"</i>
+		</div>
+	</body>
+</html>
